@@ -34,14 +34,39 @@ filterBtns.forEach(btn => btn.addEventListener('click', () => {
 
 // 4. Validasi form kontak
 const form = document.getElementById('form-kontak');
-if (form) form.addEventListener('submit', e => {
+if (form) form.addEventListener('submit', async e => {
   e.preventDefault();
   const nama = form.nama.value.trim();
   const email = form.email.value.trim();
   const pesan = form.pesan.value.trim();
+  const status = document.getElementById('pesan-sukses');
   if (!nama) return alert('Nama tidak boleh kosong!');
   if (!/^\S+@\S+\.\S+$/.test(email)) return alert('Masukkan email yang valid, contoh: nama@email.com');
   if (pesan.length < 10) return alert('Pesan minimal 10 karakter.');
-  document.getElementById('pesan-sukses').textContent = 'Terima kasih, ' + nama + '! Pesanmu sudah saya terima.';
-  form.reset();
+
+  // Kirim ke Web3Forms (diteruskan ke email pemilik web)
+  const tombol = form.querySelector('button[type="submit"]');
+  tombol.disabled = true;
+  tombol.textContent = 'Mengirim...';
+  status.style.color = '';
+  status.textContent = '';
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    const data = await res.json();
+    if (data.success) {
+      status.textContent = 'Terima kasih, ' + nama + '! Pesanmu sudah saya terima.';
+      form.reset();
+    } else {
+      throw new Error(data.message || 'Gagal mengirim');
+    }
+  } catch (err) {
+    status.style.color = 'var(--hot)';
+    status.textContent = 'Maaf, pesan gagal dikirim. Coba lagi beberapa saat.';
+  }
+  tombol.disabled = false;
+  tombol.textContent = 'Kirim pesan';
 });
