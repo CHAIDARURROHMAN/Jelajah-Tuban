@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontak | Jelajah Tuban</title>
+<meta name="description" content="Panduan wisata Kabupaten Tuban, Jawa Timur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a href="index.html" class="logo">Jelajah Tuban</a>
+  <ul class="menu" id="menu">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="destinasi.html">Destinasi</a></li>
+   <li><a href="kontak.html" class="active">Kontak</a></li>
+   <li><button class="btn-icon" id="theme-toggle" aria-label="Ganti mode terang/gelap">🌙</button></li>
+  </ul>
+  <button class="btn-icon" id="hamburger" aria-label="Buka menu" aria-expanded="false">☰</button>
+ </div>
+</header>
+<main><div class="wrap">
+ <div class="page-title">
+  <h1>Kontak &amp; Tentang Saya</h1>
+  <p>Punya saran tempat wisata lain? Kirim lewat formulir.</p>
+ </div>
+ <section class="two-col">
+  <div>
+   <h2>Tentang Saya</h2>
+   <ul class="team">
+    <li><strong>Nama Kamu</strong><br>Pembuat web · XII RPL</li>
+    <li>Website ini dibuat sebagai proyek akhir Cloud Computing untuk mengenalkan wisata Tuban.</li>
+   </ul>
+  </div>
+  <form id="form-kontak" novalidate>
+   <h2>Kirim Saran</h2>
+   <label for="nama">Nama</label>
+   <input type="text" id="nama" name="nama" placeholder="Nama kamu">
+   <label for="email">Email</label>
+   <input type="email" id="email" name="email" placeholder="nama@email.com">
+   <label for="pesan">Pesan</label>
+   <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis saranmu..."></textarea>
+   <button type="submit" class="btn" style="margin-top:18px">Kirim pesan</button>
+   <p id="pesan-sukses" role="status"></p>
+  </form>
+ </section>
+</div></main>
+<footer><p>© 2026 Jelajah Tuban · Proyek Akhir Cloud Computing, XII RPL</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

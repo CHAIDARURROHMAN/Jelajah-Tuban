@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destinasi | Jelajah Tuban</title>
+<meta name="description" content="Panduan wisata Kabupaten Tuban, Jawa Timur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a href="index.html" class="logo">Jelajah Tuban</a>
+  <ul class="menu" id="menu">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="destinasi.html" class="active">Destinasi</a></li>
+   <li><a href="kontak.html">Kontak</a></li>
+   <li><button class="btn-icon" id="theme-toggle" aria-label="Ganti mode terang/gelap">🌙</button></li>
+  </ul>
+  <button class="btn-icon" id="hamburger" aria-label="Buka menu" aria-expanded="false">☰</button>
+ </div>
+</header>
+<main><div class="wrap">
+ <div class="page-title">
+  <h1>Destinasi Wisata</h1>
+  <p>Pilih kategori untuk menyaring tempat wisata.</p>
+ </div>
+ <div class="filters">
+  <button class="active" data-filter="semua">Semua</button>
+  <button data-filter="alam">Alam</button>
+  <button data-filter="religi">Religi</button>
+  <button data-filter="sejarah">Sejarah</button>
+  <button data-filter="budaya">Budaya</button>
+ </div>
+ <div class="grid">
+   <article class="card" data-kategori="alam">
+    <div class="thumb"><img src="img/goa-akbar.jpg" alt="Goa Akbar" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Alam</span><h3>Goa Akbar</h3><p>Goa kapur di tengah kota dengan lorong-lorong berstalaktit. Mudah dijangkau dari alun-alun.</p></div>
+   </article>
+   <article class="card" data-kategori="alam">
+    <div class="thumb"><img src="img/pantai-boom.jpg" alt="Pantai Boom" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Alam</span><h3>Pantai Boom</h3><p>Pantai di bekas pelabuhan lama Tuban. Cocok untuk melihat matahari terbenam di Laut Jawa.</p></div>
+   </article>
+   <article class="card" data-kategori="religi">
+    <div class="thumb"><img src="img/makam-sunan-bonang.jpg" alt="Makam Sunan Bonang" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Religi</span><h3>Makam Sunan Bonang</h3><p>Makam salah satu Wali Songo yang ramai dikunjungi peziarah dari berbagai daerah.</p></div>
+   </article>
+   <article class="card" data-kategori="alam">
+    <div class="thumb"><img src="img/air-terjun-nglirip.jpg" alt="Air Terjun Nglirip" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Alam</span><h3>Air Terjun Nglirip</h3><p>Air terjun bertingkat di Kecamatan Singgahan, dikelilingi perbukitan yang sejuk.</p></div>
+   </article>
+   <article class="card" data-kategori="sejarah">
+    <div class="thumb"><img src="img/klenteng-kwan-sing-bio.jpg" alt="Klenteng Kwan Sing Bio" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Sejarah</span><h3>Klenteng Kwan Sing Bio</h3><p>Klenteng bersejarah di dekat pelabuhan dengan arsitektur khas Tionghoa.</p></div>
+   </article>
+   <article class="card" data-kategori="alam">
+    <div class="thumb"><img src="img/goa-ngerong.jpg" alt="Goa Ngerong" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Alam</span><h3>Goa Ngerong</h3><p>Goa di Kecamatan Rengel yang dihuni banyak kelelawar dan dialiri sungai bawah tanah.</p></div>
+   </article>
+   <article class="card" data-kategori="alam">
+    <div class="thumb"><img src="img/pantai-tambakboyo.jpg" alt="Pantai Tambakboyo" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Alam</span><h3>Pantai Tambakboyo</h3><p>Pantai yang tenang di pesisir Tuban, cocok untuk bersantai bersama keluarga.</p></div>
+   </article>
+   <article class="card" data-kategori="religi">
+    <div class="thumb"><img src="img/masjid-agung-tuban.jpg" alt="Masjid Agung Tuban" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Religi</span><h3>Masjid Agung Tuban</h3><p>Masjid besar di sisi alun-alun kota, bersebelahan dengan kompleks Makam Sunan Bonang.</p></div>
+   </article>
+   <article class="card" data-kategori="religi">
+    <div class="thumb"><img src="img/makam-syekh-asmoroqondi.jpg" alt="Makam Syekh Asmoroqondi" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Religi</span><h3>Makam Syekh Asmoroqondi</h3><p>Makam penyebar Islam di tanah Jawa, berlokasi di Desa Gesikharjo, Kecamatan Palang.</p></div>
+   </article>
+   <article class="card" data-kategori="sejarah">
+    <div class="thumb"><img src="img/museum-kambang-putih.jpg" alt="Museum Kambang Putih" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Sejarah</span><h3>Museum Kambang Putih</h3><p>Museum di pusat kota yang menyimpan koleksi sejarah dan budaya Tuban.</p></div>
+   </article>
+   <article class="card" data-kategori="budaya">
+    <div class="thumb"><img src="img/batik-gedog-kerek.jpg" alt="Batik Gedog Kerek" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Budaya</span><h3>Batik Gedog Kerek</h3><p>Kain tenun dan batik tulis khas Kecamatan Kerek. Pengunjung bisa melihat proses pembuatannya.</p></div>
+   </article>
+   <article class="card" data-kategori="religi">
+    <div class="thumb"><img src="img/makam-sunan-bejagung-lor.jpg" alt="Makam Sunan Bejagung Lor" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Religi</span><h3>Makam Sunan Bejagung Lor</h3><p>Makam ulama penyebar Islam di Desa Bejagung, Kecamatan Semanding. Ramai dikunjungi peziarah.</p></div>
+   </article>
+   <article class="card" data-kategori="religi">
+    <div class="thumb"><img src="img/makam-sunan-bejagung-kidul.jpg" alt="Makam Sunan Bejagung Kidul" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Religi</span><h3>Makam Sunan Bejagung Kidul</h3><p>Makam ulama yang berada tidak jauh dari Bejagung Lor. Biasanya diziarahi bersamaan.</p></div>
+   </article>
+   <article class="card" data-kategori="sejarah">
+    <div class="thumb"><img src="img/monumen-kumbokarno.jpg" alt="Monumen Kumbokarno" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Sejarah</span><h3>Monumen Kumbokarno</h3><p>Patung tokoh pewayangan Kumbokarno yang menjadi salah satu ikon Kota Tuban.</p></div>
+   </article>
+   <article class="card" data-kategori="sejarah">
+    <div class="thumb"><img src="img/alun-alun-tuban.jpg" alt="Alun-alun Tuban" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Sejarah</span><h3>Alun-alun Tuban</h3><p>Pusat kota lama Tuban. Masjid Agung dan Makam Sunan Bonang berada di sekitarnya.</p></div>
+   </article>
+   <article class="card" data-kategori="sejarah">
+    <div class="thumb"><img src="img/pendopo-krida-manunggal.jpg" alt="Pendopo Krida Manunggal" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Sejarah</span><h3>Pendopo Krida Manunggal</h3><p>Pendopo kabupaten dengan arsitektur Jawa, tempat berlangsungnya berbagai acara resmi daerah.</p></div>
+   </article>
+   <article class="card" data-kategori="budaya">
+    <div class="thumb"><img src="img/legen-dan-tuak.jpg" alt="Legen &amp; Tuak Siwalan" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Budaya</span><h3>Legen &amp; Tuak Siwalan</h3><p>Minuman khas Tuban dari nira pohon siwalan. Legen rasanya manis, sedangkan tuak sudah difermentasi.</p></div>
+   </article>
+   <article class="card" data-kategori="budaya">
+    <div class="thumb"><img src="img/kesenian-tayub.jpg" alt="Kesenian Tayub" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Budaya</span><h3>Kesenian Tayub</h3><p>Tari tradisional yang masih hidup di Tuban dan biasa tampil di acara desa.</p></div>
+   </article>
+   <article class="card" data-kategori="budaya">
+    <div class="thumb"><img src="img/haul-sunan-bonang.jpg" alt="Haul Sunan Bonang" loading="lazy" onerror="this.remove()"></div>
+    <div class="card-body"><span class="tag">Budaya</span><h3>Haul Sunan Bonang</h3><p>Peringatan tahunan di kompleks makam Sunan Bonang yang dihadiri ribuan orang.</p></div>
+   </article>
+ </div>
+</div></main>
+<footer><p>© 2026 Jelajah Tuban · Proyek Akhir Cloud Computing, XII RPL</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
